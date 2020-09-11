@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace MicrosoftExample
         public Form1()
         {
             InitializeComponent();
+            lblVersionNumber.Text = Application.ProductVersion;
         }
 
         private void showButton_Click(object sender, EventArgs e)
@@ -26,8 +28,6 @@ namespace MicrosoftExample
                 pictureBox1.Load(openFileDialog1.FileName);
             }
         }
-
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             // Close the form.
